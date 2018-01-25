@@ -33,7 +33,7 @@ python benchmark.py
 ```
 On KNL compute nodes
 ```
-#!/bin/bash -l
+#!/bin/bash
 
 #SBATCH -N 1
 #SBATCH -t 00:30:00
