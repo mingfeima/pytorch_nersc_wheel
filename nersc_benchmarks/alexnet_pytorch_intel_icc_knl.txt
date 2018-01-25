@@ -1,0 +1,6 @@
+Running on device:  Intel(R) Xeon Phi(TM) CPU 7250 @ 1.40GHz
+ModelType: alexnet, Kernels: nn Input shape: 128x3x224x224
+nn                              :forward:     896.49     142.78
+nn                             :backward:    1547.18
+nn                               :update:       2.75
+nn                                :total:    2443.66      52.38

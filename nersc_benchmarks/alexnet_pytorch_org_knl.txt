@@ -1,0 +1,2 @@
+srun: error: nid04005: task 0: Segmentation fault
+srun: Terminating job step 9672934.0

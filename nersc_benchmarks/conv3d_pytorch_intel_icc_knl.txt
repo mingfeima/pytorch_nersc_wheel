@@ -1,0 +1,2 @@
+avg time 400.05531311035156 millisecond
+['/global/homes/m/mingfeim/.conda/envs/intel_pytorch_icc512/lib/python3.6/site-packages/torch']

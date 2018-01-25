@@ -1,0 +1,6 @@
+Running on device:  Intel(R) Xeon(R) CPU E5-2698 v3 @ 2.30GHz
+ModelType: alexnet, Kernels: nn Input shape: 128x3x224x224
+nn                              :forward:     508.27     251.84
+nn                             :backward:     881.02
+nn                               :update:      54.71
+nn                                :total:    1389.29      92.13
