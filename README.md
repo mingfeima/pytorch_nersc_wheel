@@ -1,5 +1,5 @@
 # pytorch_nersc_wheel
-This repo contains PyTorch wheel installation file for NERSC Cori super computer, source code from [Intel-Pytorch](https://github.com/intel/pytorch)
+This repo contains PyTorch wheel installation file for NERSC Cori super computer, source code from [Intel-Pytorch](https://github.com/intel/pytorch), [icc](https://github.com/intel/pytorch/tree/icc) branch.
 
 ## Performance has been optimized for the following features:
 * Conv2d optimization with MKL-DNN
