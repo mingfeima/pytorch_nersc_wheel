@@ -78,7 +78,7 @@ for epoch in range(num_epochs):
     
     # Update the parameters as normal
     # note that we only sync parameters at the begining of each epoch
-    # the updated parameter is supposed to identical across ranks since the accumulated gradient is identical
+    # the updated parameter is supposed to be identical across ranks since the accumulated gradient is identical
     optim.step()
   
 ```
