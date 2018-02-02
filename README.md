@@ -20,7 +20,7 @@ This repo contains PyTorch wheel installation file for NERSC Cori super computer
 
 ## Batch script for Cori
 On Haswell compute nodes
-```
+```bash
 #!/bin/bash
 
 #SBATCH -N 1
@@ -33,7 +33,7 @@ export OMP_NUM_THREADS=32
 python benchmark.py
 ```
 On KNL compute nodes
-```
+```bash
 #!/bin/bash
 
 #SBATCH -N 1
