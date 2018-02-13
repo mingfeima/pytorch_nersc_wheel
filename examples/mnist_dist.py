@@ -5,8 +5,11 @@ Use distributed MPI backend
 PyTorch distributed tutorial:
     http://pytorch.org/tutorials/intermediate/dist_tuto.html
 
-average_gradients in original tutorial is not correct,
-gradients need to be accumulated(all_reduce) across ranks, not averaging...
+This example make following updates upon the tutorial
+1. Add params sync at beginning of each epoch
+2. Allreduce gradients across ranks, not averaging
+3. Sync the shuffled index during data partition
+4. Remove torch.multiprocessing in __main__
 """
 import os
 import sys
