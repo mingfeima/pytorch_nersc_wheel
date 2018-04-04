@@ -1,5 +1,5 @@
 # pytorch_nersc_wheel
-This repo contains PyTorch wheel installation file for NERSC Cori super computer, source code from [Intel-Pytorch](https://github.com/intel/pytorch), [icc](https://github.com/intel/pytorch/tree/icc) branch.
+This repo contains PyTorch wheel installation file for NERSC Cori super computer, source code from [Intel-Pytorch](https://github.com/intel/pytorch), [icc_0.4](https://github.com/intel/pytorch/tree/icc_0.4) branch.
 
 ## Performance has been optimized for the following features:
 * Conv2d optimization with MKL-DNN
@@ -10,8 +10,8 @@ This repo contains PyTorch wheel installation file for NERSC Cori super computer
 
 ## Installation
 * `pytorch_original_gcc` - compiled with origin PyTorch master with gcc
-* `pytorch_intel_icc` - compiled with Intel-PyTorch `icc` branch with icc, specialized for Haswell
-* `pytorch_intel_icc512` - compiled with Intel-PyTorch `icc` branch with icc and AVX512 support, specialized for KNL
+* `pytorch_intel_icc` - compiled with Intel-PyTorch `icc`, support both Haswell and KNL
+* ~~`pytorch_intel_icc512` - compiled with Intel-PyTorch `icc` branch with icc and AVX512 support, specialized for KNL~~
 
 ## Benchmark
 * [Conv3d](https://github.com/MlWoo/PyTorch-benchmark)
@@ -19,6 +19,7 @@ This repo contains PyTorch wheel installation file for NERSC Cori super computer
 * [LSTM](https://github.com/xhzhao/pytorch-rnn-benchmark)
 
 ## Batch script for Cori
+BKM: to our knowledge, KMP_AFFINITY setting has great impact on PyTorch CPU performance, we'll keep on updating best KMP_AFFINITY setting we know.
 On Haswell compute nodes
 ```bash
 #!/bin/bash
@@ -29,6 +30,7 @@ On Haswell compute nodes
 #SBATCH -L SCRATCH
 #SBATCH -C haswell
 
+export KMP_AFFINITY="granularity=fine,compact,1,0"
 export OMP_NUM_THREADS=32
 python benchmark.py
 ```
