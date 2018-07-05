@@ -32,6 +32,7 @@ On Haswell compute nodes
 
 export KMP_AFFINITY="granularity=fine,compact,1,0"
 export OMP_NUM_THREADS=32
+export KMP_BLOCKTIM=1
 python benchmark.py
 ```
 On KNL compute nodes
@@ -46,6 +47,7 @@ On KNL compute nodes
 
 export KMP_AFFINITY="granularity=fine,compact,1,0"
 export OMP_NUM_THREADS=68
+export KMP_BLOCKTIME=1
 python benchmark.py
 ```
 
