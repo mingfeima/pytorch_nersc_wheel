@@ -140,7 +140,7 @@ def run(rank, size):
             optimizer.zero_grad()
             output = model(data)
             loss = F.nll_loss(output, target)
-            epoch_loss += loss.data[0]
+            epoch_loss += loss.item()
             loss.backward()
             # all_reduce grads
             sync_grads(model)
